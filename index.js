@@ -1,45 +1,33 @@
-const botonLogin = document.getElementById("btn_login")
 
-const users= [ 
+let user = prompt('ingresa un nombre de usuario')
+let pasword = prompt('ingrsa un pasword')
+let edad = prompt('ingresa tu edad')
 
-    {"nombre":"fede", "clave":"12345", tipo: "admin" },
-    {"nombre":"maria", "clave":"12345", tipo: "comun" }
-    
-    ]
+let precios =[ 
+surtfista = 45,
+biquini = 35,
+completo = 40,
+competitivo = 60,
+]
 
-    botonLogin.onclick = () => {
-        const userName = document.getElementById("username").value
-        const password = document.getElementById("password").value
+ if (user == '', pasword == '') {
+    alert('ingrese correctamente los datos')
+} else {
+    tienda()
+}
+//creando el sistema interactivo de la tienda
+function tienda() {
+    alert('Bien venid@ a Eva by Ara Battle')
+    let seleccion_usuario = prompt('que tipo de traje de  desea? \n 1.surfista \n 2.biquini \n 3.completo \n 4.competitivo' )
 
-            //Validando si el usuario escribio en el formulario//
+    if (seleccion_usuario == 1) {
+    alert (user + ' usted eligio')
+} else if (seleccion_usuario == 2,seleccion_usuario == 'biquini'){
+    alert (user + ' usted eligio')
+} else if (seleccion_usuario == 3, seleccion_usuario == 'completo') {
+    alert (user + ' usted eligio')
+} else if (seleccion_usuario == 4, seleccion_usuario == 'competitivo'){
+    alert (user + ' usted eligio')
+}
 
-        if(userName.length > 0 && password.length > 0){
-
-            //Iterando arreglo de usuarios para buscar considencias//
-
-            for(const user of users){
-
-                //Validacion de Usuario con valores del formulario//
-
-                if(user.nombre.toUpperCase() == userName.toUpperCase() && user.clave.toUpperCase() == password.toUpperCase()){
-                    
-                    redired()
-                    return
-                }
-
-            }
-            showAlert()
-            
-        }else{
-            showAlert()
-        }
-
-    }
-
-    function showAlert () {
-        alert ("Datos invalidos")
-    }
-
-    function redired () {
-        window.location.href='https://google.com';
-    }
+}
